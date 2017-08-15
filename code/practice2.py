@@ -82,7 +82,7 @@ sess = tf.Session()
 # Initializes global variables in the graph.
 sess.run(tf.global_variables_initializer())
 
-for step in range(2001):
+for step in range(100001):
     cost_val, hy_val, _ = sess.run(
         [cost, hypothesis, train], feed_dict={X: x_data, Y: y_data})
     if step % 200 == 0:
